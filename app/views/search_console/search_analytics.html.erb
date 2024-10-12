@@ -1,0 +1,24 @@
+<h1>Search Analytics Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Query</th>
+      <th>Clicks</th>
+      <th>Impressions</th>
+      <th>CTR</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @analytics_data.rows.each do |row| %>
+      <tr>
+        <td><%= row.keys.first %></td>
+        <td><%= row.clicks %></td>
+        <td><%= row.impressions %></td>
+        <td><%= row.ctr %></td>
+        <td><%= row.position %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

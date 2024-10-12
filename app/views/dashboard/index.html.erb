@@ -1,0 +1,9 @@
+<h1>Welcome to the Dashboard</h1>
+<p>This is your dashboard where you can manage your Google Search Console data.</p>
+
+<% if session[:access_token] %>
+  <p>You are successfully authenticated with Google!</p>
+  <p>Your access token is: <%= session[:access_token] %></p>
+<% else %>
+  <%= link_to "Login with Google", "/auth/google_oauth2" %>
+<% end %>
